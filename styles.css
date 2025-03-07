@@ -1,31 +1,113 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: all 0.3s ease-in-out;
 }
-header {
-    background: #333;
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
     color: white;
-    padding: 20px;
 }
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0073e6, #003366);
+    color: white;
+    padding: 30px;
+    border-radius: 0 0 20px 20px;
+}
+
 nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Sections */
 section {
-    padding: 20px;
-}
-.project {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
     background: white;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
+
+.dark-mode section {
+    background: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Projects */
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: linear-gradient(135deg, #003366, #0073e6);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
-    margin-top: 20px;
     background: #333;
     color: white;
     padding: 10px;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-button {
+    padding: 8px 16px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#theme-button:hover {
+    background: #ffcc00;
+    color: black;
 }
